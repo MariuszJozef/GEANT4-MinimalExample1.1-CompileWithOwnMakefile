@@ -1,4 +1,4 @@
-# GEANT4-MinimalExample0-CompileWithOwnMakefile
+# GEANT4-MinimalExample1.1-CompileWithOwnMakefile
 Instead of CMake (as used in the GEANT4 installation guide) you may prefer to use a Makefile. 
 
 1. Step into the direcory where the file with main() function resides. (In MinimalExample1 that directory is main/ and the file is Geant4-MinimalWorkingExample1.cpp).
