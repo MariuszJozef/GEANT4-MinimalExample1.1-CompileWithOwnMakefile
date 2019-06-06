@@ -1,2 +1,9 @@
 # GEANT4-MinimalExample0-CompileWithOwnMakefile
-This is an afterthough to MinimalExample1: no Eclipse, just a Linux/Mac terminal and the code in the same directory structure. Compile with this Makefile.
+Instead of CMake (as used in the GEANT4 installation guide) you may prefer to use a Makefile. 
+
+1. Step into the direcory where the file with main() function resides. (In MinimalExample1 that directory is main/).
+2. At the command prompt:
+   make
+3. Or:
+   make clean all
+
