@@ -3,7 +3,6 @@ EXECUTABLE := Geant4-MinimalWorkingExample1
 HDRDIR := hdr
 SRCDIR := src
 OBJDIR := obj
-#DEPDIR := dep
 DEPDIR := $(OBJDIR)
 BINDIR := .
 
