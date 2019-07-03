@@ -1,12 +1,13 @@
-EXECUTABLE := Geant4-MinimalWorkingExample1 
+EXECUTABLE := Geant4-MinimalWorkingExample1
 
-HDRDIR := hdr
-SRCDIR := src
-OBJDIR := obj
+MAINDIR := ./main
+HDRDIR := $(MAINDIR)/hdr
+SRCDIR := $(MAINDIR)/src
+OBJDIR := $(MAINDIR)/obj
 DEPDIR := $(OBJDIR)
-BINDIR := .
+BINDIR := $(MAINDIR)/.
 
-SRCEXT := cpp
+SRCEXT := cc
 HDREXT := hh
 
 MAINFILE := $(EXECUTABLE).$(SRCEXT)
@@ -30,11 +31,11 @@ $(BINDIR)/$(EXECUTABLE): $(OBJFILES)
 $(OBJDIR)/%.o: $(SRCDIR)/%.${SRCEXT} 
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -I$(HDRDIR) -c $< -o $@
 
-$(OBJDIR)/$(EXECUTABLE).o: $(EXECUTABLE).$(SRCEXT)
+$(OBJDIR)/$(EXECUTABLE).o: $(MAINDIR)/$(EXECUTABLE).$(SRCEXT)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -I$(HDRDIR) -c $< -o $@
 
 -include $(DEPFILES)	
 
 .PHONY: clean
 clean: 
-	rm -f $(BINDIR)/${EXECUTABLE} ${OBJDIR}/*.{o,d} 
+	rm -f $(BINDIR)/${EXECUTABLE} ${OBJDIR}/*.{o,d}
