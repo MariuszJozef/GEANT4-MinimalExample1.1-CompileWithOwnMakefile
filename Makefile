@@ -18,10 +18,11 @@ DEPFILES := $(patsubst $(SRCDIR)/%.${SRCEXT},$(DEPDIR)/%.d,$(SRCFILES))
 DEPFILES += $(DEPDIR)/$(EXECUTABLE).d
 
 CXX := g++
-CPPFLAGS := -MMD -MP
-CXXFLAGS := `/Applications/GEANT4again/geant4.10.03.p01-install/bin/geant4-config --cflags`
-LDFLAGS := `/Applications/GEANT4again/geant4.10.03.p01-install/bin/geant4-config --libs`
+CPPFLAGS := -MMD -MP -Wall -std=c++17
+CXXFLAGS := `/Applications/GEANT4/geant4.10.03.p01-install/bin/geant4-config --cflags`
+LDFLAGS := `/Applications/GEANT4/geant4.10.03.p01-install/bin/geant4-config --libs`
 
+all: $(BINDIR)/$(EXECUTABLE)
 
 $(BINDIR)/$(EXECUTABLE): $(OBJFILES) 
 	$(CXX) $(LDFLAGS) -o $@ $(OBJFILES) 
