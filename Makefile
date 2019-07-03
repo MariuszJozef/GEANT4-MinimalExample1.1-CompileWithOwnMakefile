@@ -7,7 +7,7 @@ OBJDIR := $(MAINDIR)/obj
 DEPDIR := $(OBJDIR)
 BINDIR := $(MAINDIR)/.
 
-SRCEXT := cc
+SRCEXT := cpp
 HDREXT := hh
 
 MAINFILE := $(EXECUTABLE).$(SRCEXT)
